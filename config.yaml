@@ -1,0 +1,72 @@
+# Roblox Auto-Signup Configuration (2026)
+
+# Account Settings
+account:
+  password: "Qing762.chy"  # Default password or leave empty to prompt
+  count: 1
+  verification_enabled: true
+  customization_enabled: true
+  
+# Username Settings
+username:
+  format: ""  # Empty for random, or prefix like "player_"
+  scrambled: true  # Use scrambled vs structured names
+  
+# Browser Settings
+browser:
+  headless: false
+  stealth_mode: true
+  user_agent: "auto"  # Auto-generate or specify custom
+  
+# Captcha Settings (FREE ONLY)
+captcha:
+  service: "nopecha"  # Only NopeCHA (FREE - 200 solves/day)
+  api_key: ""  # Your NopeCHA API key from https://nopecha.com/manage
+  
+  # NopeCHA Accuracy Improvements (slower = more accurate)
+  delays:
+    before_solve: 3  # Wait 3s before sending to NopeCHA
+    after_solve: 5  # Wait 5s after receiving solution
+    between_retries: 10  # Wait 10s between retry attempts
+  
+  timeout: 300  # Max time to wait for captcha solution
+  max_retries: 5  # Retry up to 5 times if captcha fails
+  auto_retry_on_fail: true  # Automatically retry failed captchas
+  
+# Email Settings (ALL FREE)
+email:
+  primary_service: "mailtm"  # Mail.tm (FREE)
+  fallback_services:  # Automatic fallback if primary fails
+    - "tempmail"  # Temp-Mail.org (FREE)
+    - "guerrillamail"  # Guerrilla Mail (FREE)
+  
+  verification_timeout: 60  # Wait up to 60s for verification email
+  max_retries: 5  # Retry up to 5 times
+  check_interval: 5  # Check for new emails every 5 seconds
+  
+# Proxy Settings (Optional)
+proxy:
+  enabled: false
+  rotation: true
+  list: []
+    # - "http://proxy1.example.com:8080"
+    # - "http://proxy2.example.com:8080"
+  
+# Following Settings (Optional)
+following:
+  enabled: false
+  usernames: []
+    # - "username1"
+    # - "username2"
+  
+# Export Settings
+export:
+  formats: ["txt", "json", "csv"]  # Multiple formats
+  roblox_account_manager: true  # Export .ROBLOSECURITY cookies
+  
+# Advanced Settings
+advanced:
+  analytics: true
+  parallel_execution: false
+  max_parallel: 3
+  rate_limit_delay: 5  # seconds between accounts
